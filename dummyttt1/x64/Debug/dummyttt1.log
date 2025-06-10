@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\yasak\source\repos\dummyttt1\main.c(55,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\yasak\source\repos\dummyttt1\main.c(56,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\yasak\source\repos\dummyttt1\main.c(89,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\yasak\source\repos\dummyttt1\main.c(90,37): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  dummyttt1.vcxproj -> C:\Users\yasak\source\repos\dummyttt1\x64\Debug\dummyttt1.exe
