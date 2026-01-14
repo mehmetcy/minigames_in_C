@@ -1,0 +1,16 @@
+# except build outputs
+*.o
+*.exe
+*.out
+
+# except libs
+*.dll
+*.lib
+*.a
+
+# except vscode config
+.vscode/
+
+# except system files
+.DS_Store
+Thumbs.db
