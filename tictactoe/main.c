@@ -5,20 +5,20 @@
 #include <stdlib.h>
 #include <time.h>
 
-// --- SETTINGS ---
+// --- settings ---
 const int SCREEN_WIDTH = 600;
 const int SCREEN_HEIGHT = 600;
 const int GRID_SIZE = 20; // Size of one grid cell (snake part)
 const int GRID_COUNT_X = SCREEN_WIDTH / GRID_SIZE;
 const int GRID_COUNT_Y = SCREEN_HEIGHT / GRID_SIZE;
 
-// --- COLORS (RGBA) ---
+// --- colors ---
 const SDL_Color COLOR_BLACK = {0, 0, 0, 255};
 const SDL_Color COLOR_WHITE = {255, 255, 255, 255};
 const SDL_Color COLOR_GREEN = {0, 255, 0, 255};
 const SDL_Color COLOR_RED   = {255, 0, 0, 255};
 
-// --- STRUCTURES ---
+// --- structures ---
 typedef struct {
     int x;
     int y;
@@ -28,7 +28,7 @@ typedef enum {
     UP, DOWN, LEFT, RIGHT
 } Direction;
 
-// --- GLOBAL VARIABLES ---
+// --- global variables ---
 SDL_Window* window = NULL;
 SDL_Renderer* renderer = NULL;
 TTF_Font* font = NULL;
@@ -115,11 +115,11 @@ bool init() {
         return false;
     }
 
-    // Load font (Make sure arial.ttf is in the same directory)
+    // Load font 
     font = TTF_OpenFont("arial.ttf", 24);
     if (font == NULL) {
         printf("Failed to load font! Check arial.ttf. Error: %s\n", TTF_GetError());
-        // Continuing without font (text won't render)
+        // text won't render, but it'll continue
     }
 
     srand(time(NULL)); // Seed random number generator
@@ -221,7 +221,7 @@ void render() {
         SDL_Rect snakeRect = { snake[i].x * GRID_SIZE, snake[i].y * GRID_SIZE, GRID_SIZE, GRID_SIZE };
         SDL_RenderFillRect(renderer, &snakeRect);
         
-        // Optional: Draw outline for segments
+        // opt.:Draw outline for segments
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderDrawRect(renderer, &snakeRect);
         SDL_SetRenderDrawColor(renderer, COLOR_GREEN.r, COLOR_GREEN.g, COLOR_GREEN.b, COLOR_GREEN.a);
