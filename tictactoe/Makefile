@@ -9,7 +9,7 @@ SDL_PATH = E:/SDL2_A
 INCLUDES = -I$(SDL_PATH)/include -I$(SDL_PATH)/include/SDL2
 
 # Linker flags
-# NOTE: Order matters here! (mingw32 -> SDL2main -> SDL2 -> extensions)
+# NOTE: watch the priority order (mingw32 -> SDL2main -> SDL2 -> extensions)
 LIBS = -L$(SDL_PATH)/lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf
 
 # Project files
